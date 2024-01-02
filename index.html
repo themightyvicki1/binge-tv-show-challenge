@@ -20,34 +20,93 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&family=Zen+Kaku+Gothic+New&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Nunito+Sans:opsz,wght@6..12,600&family=Poppins:wght@200;300;400;600;700;900&display=swap"
       rel="stylesheet"
     />
     <!--link to bootstrap-->
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <style>
       :root {
-        --primary-font: "Sawarabi Gothic", sans-serif;
+        --primary-font: "Nunito Sans", sans-serif;
         /*font-family: 'Zen Kaku Gothic New', sans-serif;*/
+        --blackish-color: #222831;
       }
       body {
-        background: linear-gradient(
-          90deg,
-          rgb(82, 183, 178) 0%,
-          rgb(139, 102, 241) 100%
-        );
+        /*space around the div*/
+        padding: 50px;
+        background-color: #fafafa;
       }
+
       h1 {
         font-size: 125px;
         font-family: var(--primary-font);
       }
 
+      li {
+        list-style: none;
+      }
+
+      ul {
+        padding: 30px;
+      }
       /* target the div that contains the carousel */
       #carouselExampleIndicators {
         /* size of carousel itself */
         width: 400px;
         /* this will center the carousel on the web page */
         margin: auto;
+      }
+
+      .container {
+        width: 1200px;
+        /* centers the div on the webpage */
+        margin: 0 auto;
+        border: 2px solid #352f44;
+        box-shadow: 10px 5px 5px #352f44;
+        padding: 15px;
+        text-align: center;
+        background: linear-gradient(
+          90deg,
+          rgb(82, 183, 178) 0%,
+          rgb(139, 102, 241) 100%
+        );
+        padding-bottom: 50px;
+      }
+
+      .buttons {
+        display: block;
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        background-color: var(--blackish-color);
+        padding: 16px;
+        text-decoration: none;
+      }
+
+      /*div containing the carousel to be able to add spacing around it */
+      .container-carousel {
+        padding: 30px;
+      }
+      .button-container {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h2.titles {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        margin: 0 auto;
+        color: var(--blackish-color);
+        opacity: 0.8;
       }
     </style>
   </head>
@@ -65,16 +124,23 @@
       />
       <ul>
         <li>
-          Where to watch:
-          <a
-            href="https://www.disneyplus.com/"
-            target="_blank"
-            title="https://www.disneyplus.com/"
-            >Disney+</a
-          >
+          <h2 class="titles">Where to watch</h2>
+          <p>
+            The entire series can be found with a subscription to Disney+<br />
+          </p>
+          <div class="button-container">
+            <a
+              href="https://www.disneyplus.com/"
+              target="_blank"
+              title="https://www.disneyplus.com/"
+              class="buttons mb-5"
+              >Disney+</a
+            >
+          </div>
         </li>
-        <li>Similar Shows: WandaVision, Hawkeye, She-Hulk, Loki</li>
+
         <li>
+          <h2 class="titles mt-5">About</h2>
           Read more about the show
           <a
             href="https://en.wikipedia.org/wiki/Agents_of_S.H.I.E.L.D."
@@ -83,93 +149,109 @@
             >here</a
           >
         </li>
+        <li>
+          <div class="container-carousel">
+            <h2 class="titles">Similar Shows</h2>
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/933/original/919TmI2t4BS._AC_SY879_.jpg?1701719977"
+                    class="d-block w-100"
+                    alt="Loki TV Series"
+                    title="Loki TV Series"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/934/original/ct5pNE5dDHryHLDnxyZPYcqO1sz.jpg?1701720090"
+                    class="d-block w-100"
+                    alt="Hawkeye TV Series"
+                    title="Hawkeye TV Series"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/935/original/81jmltkvv0L._AC_SL1500_.jpg?1701720282"
+                    class="d-block w-100"
+                    alt="WandaVision TV Series"
+                    title="WandaVision TV Series"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/936/original/s-l500.jpg?1701721072"
+                    class="d-block w-100"
+                    alt="She-Hulk TV Series"
+                    title="She-Hulk TV Series"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="button-container">
+            <a
+              href="https://www.disneyplus.com/"
+              class="buttons"
+              target="_blank"
+              title="Watch now"
+              >Start watching</a
+            >
+          </div>
+        </li>
       </ul>
-
-      link to ratings link to sign up link to view trailer marvel logo image
-      disney+ logo image
-
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="3"
-            aria-label="Slide 4"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/933/original/919TmI2t4BS._AC_SY879_.jpg?1701719977"
-              class="d-block w-100"
-              alt="Loki TV Series"
-              title="Loki TV Series"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/934/original/ct5pNE5dDHryHLDnxyZPYcqO1sz.jpg?1701720090"
-              class="d-block w-100"
-              alt="Hawkeye TV Series"
-              title="Hawkeye TV Series"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/935/original/81jmltkvv0L._AC_SL1500_.jpg?1701720282"
-              class="d-block w-100"
-              alt="WandaVision TV Series"
-              title="WandaVision TV Series"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/936/original/s-l500.jpg?1701721072"
-              class="d-block w-100"
-              alt="She-Hulk TV Series"
-              title="She-Hulk TV Series"
-            />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
     </div>
   </body>
 </html>
