@@ -94,6 +94,11 @@
         text-decoration: none;
       }
 
+      .buttons:hover {
+        color: var(--whitish-color);
+        background-color: var(--blackish-color);
+      }
+
       /*div containing the carousel to be able to add spacing around it */
       .container-carousel {
         padding: 30px;
@@ -168,6 +173,19 @@
       .images:hover {
         transform: scale(1.3);
         cursor: zoom-in;
+      }
+
+      #cast-photos {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+        grid-gap: 5px;
+        margin: 10px 10px;
+        padding: 0;
+      }
+
+      #cast-photos img {
+        max-width: 40%;
+        border-radius: 30%;
       }
 
       @media (max-width: 800px) {
@@ -263,6 +281,62 @@
               target="_blank"
               class="buttons mb-5"
               >Read more</a
+            >
+          </div>
+        </li>
+        <li>
+          <h2 class="titles mt-5">Meet the cast</h2>
+          <p class="about-why" id="cast-photos">
+            <img
+              src="ClarkGregg.PNG"
+              title="Clark Gregg"
+              alt="Clark Gregg as Phil Coulson"
+            />Clark Gregg as Phil Coulson
+            <img
+              src="ChloeBennet.PNG"
+              title="Chloe Bennet"
+              alt="Chloe Bennet as Daisy 'Skye' Johnson"
+            />
+            Chloe Bennet as Daisy 'Skye' Johnson
+            <img
+              src="ElizabethHenstridge.PNG"
+              title="Elizabeth Henstridge"
+              alt="Elizabeth Henstridge as Jemma
+            Simmons"
+            />Elizabeth Henstridge as Jemma Simmons
+            <img
+              src="IainDeCaestecker.PNG"
+              title="Iain De Caestecker"
+              alt="Iain De Caestecker as Leo Fitz"
+            />Iain De Caestecker as Leo Fitz
+            <img
+              src="MingNaWen.PNG"
+              title="Ming-Na Wen"
+              alt="Ming-Na Wen as Melinda May"
+            />Ming-Na Wen as Melinda May
+            <img
+              src="HenrySimmons.PNG"
+              title="Henry Simmons"
+              alt="Henry Simmons as Alphonso 'Mack' Mackenzie"
+            />Henry Simmons as Alphonso 'Mack' Mackenzie
+            <img
+              src="BrettDalton.PNG"
+              title="Brett Dalton"
+              alt="Brett Dalton as Grant Ward"
+            />Brett Dalton as Grant Ward
+            <img
+              src="NataliaCordova.PNG"
+              title="Natalia Cordova-Buckley"
+              alt="Natalia Cordova-Buckley as Elena 'Yo-Yo' Rodriguez"
+            />Natalia Cordova-Buckley as Elena 'Yo-Yo' Rodriguez
+          </p>
+          <div class="button-container mt-3">
+            <a
+              href="https://www.imdb.com/title/tt2364582/fullcredits?ref_=tt_cl_sm"
+              title="https://www.imdb.com/title/tt2364582/fullcredits?ref_=tt_cl_sm"
+              target="_blank"
+              class="buttons mb-5"
+              >Read more on the cast</a
             >
           </div>
         </li>
