@@ -57,13 +57,6 @@
       ul {
         padding: 30px;
       }
-      /* target the div that contains the carousel */
-      #carouselExampleIndicators {
-        /* size of carousel itself */
-        width: 400px;
-        /* this will center the carousel on the web page */
-        margin: auto;
-      }
 
       .container {
         /*width: 1200px;*/
@@ -159,13 +152,13 @@
         width: 100%;
       }
 
-      .four-col-grid {
+      /*.four-col-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 10px;
-      }
+      }*/
 
-      .four-col-grid img {
+      .col-md-3 img {
         width: 100%;
         margin-bottom: 30px;
       }
@@ -179,7 +172,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 10px;
-
         margin: 20px auto;
       }
 
@@ -191,25 +183,39 @@
       .cast-container {
         border-radius: 10px;
         background-color: #ef2d26;
-        display: flex;
+        padding-top: 15px;
+        padding-bottom: 15px;
       }
 
       @media (max-width: 800px) {
         body {
-          width: 600px;
           margin: 0 auto;
           padding: 0;
+          background-repeat: repeat;
         }
-        .four-col-grid {
-          grid-template-columns: 2fr 2fr;
+
+        #cast-photos img {
+          max-width: 100%;
+          border-radius: 30%;
         }
-        .four-col-grid img {
-          width: 100%;
-          grid-gap: 0;
-          padding: 0;
+
+        #cast-photos {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-gap: 10px;
+          margin: 10px auto;
         }
-        .box {
-          grid-template-columns: 2fr 2fr;
+
+        .cast-container {
+          border-radius: 10px;
+          background-color: #ef2d26;
+          width: fit-content;
+          font-size: 16px;
+        }
+
+        .col-md-3 img {
+          width: 150%;
+          margin: 10px auto;
         }
       }
     </style>
@@ -219,6 +225,8 @@
       <img
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/103/635/original/yo6x-logo.png?1699655305"
         width="10%"
+        title="SheCodes"
+        class="logo"
       />
       <h3 class="titles mt-3">
         Binge-Worthy TV Show Challenge <i class="fa-solid fa-tv"></i>
@@ -354,8 +362,8 @@
             If you like any of these shows, you'll enjoy this series and vice
             versa.
           </p>
-          <div class="four-col-grid mt-3">
-            <div class="similar">
+          <div class="row mt-3">
+            <div class="col-md-3">
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/933/original/919TmI2t4BS._AC_SY879_.jpg?1701719977"
                 alt="Loki"
@@ -363,7 +371,7 @@
                 class="images"
               />
             </div>
-            <div class="similar">
+            <div class="col-md-3">
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/934/original/ct5pNE5dDHryHLDnxyZPYcqO1sz.jpg?1701720090"
                 alt="Hawkeye"
@@ -371,7 +379,7 @@
                 class="images"
               />
             </div>
-            <div class="similar">
+            <div class="col-md-3">
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/935/original/81jmltkvv0L._AC_SL1500_.jpg?1701720282"
                 alt="WandaVision"
@@ -380,7 +388,7 @@
               />
             </div>
 
-            <div class="similar">
+            <div class="col-md-3">
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/936/original/s-l500.jpg?1701721072"
                 alt="She-Hulk"
